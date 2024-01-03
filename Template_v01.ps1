@@ -36,5 +36,3 @@ Function Get-Something {
      
         END {}
     }
-
-    test
