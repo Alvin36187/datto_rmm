@@ -379,15 +379,15 @@ if ($TaskType -eq "install") {
     UnInstall-Agent
     exit 0
 } 
-elseif ($TaskType -eq "upgrade" ) {
-    if(-Not (Test-AgentInstalled)) {
-        Write-Host "Cyber Protect Agent not installed"
-        exit 1
-    }
-
-    Upgrade-Agent
-    exit 0 
-}else {
-    Write-Host "Unknown task '$TaskType'"
-    exit 1
-}
+elseif ($TaskType -eq "upgrade" ) {                                             
+    if(-Not (Test-AgentInstalled)) {                                                
+        Write-Host "Cyber Protect Agent not installed"                                              
+        exit 1                                              
+    }                                               
+                                                
+    Upgrade-Agent                                               
+    exit 0                                              
+}else {                                             
+    Write-Host "Unknown task '$TaskType'"                                               
+    exit 1                                              
+}                                               
