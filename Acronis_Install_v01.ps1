@@ -1,8 +1,9 @@
 # Acronis cloud URL (required)
-$CloudUrl = $env:registrationURL
+What is the URL for Acronis backup?
+https://backup.acronis.com = $env:registrationURL
 
 # Acronis registration token (required)
-$RegistrationToken = $env:acronisToken
+5AED-058E-498C = $env:acronisToken
 
 # Task Type (install/uninstall/upgrade)
 $TaskType = $env:Action
