@@ -3,7 +3,7 @@
 # Datum : XX.XX.XXXX
 # Version : 1.0
 
-# Dies ist ein einfaches PowerShell-Programmtemplate
+# Dies ist ein einfaches Updates-Programm für optionale Updates
 
 # Überprüfen, ob es optionale Updates gibt
 
