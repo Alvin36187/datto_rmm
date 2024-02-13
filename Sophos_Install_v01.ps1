@@ -13,7 +13,7 @@ $destination = "$temp\SophosSetup.exe"
 # Wenn Sophos bereits installiert ist, zeige eine Nachricht und beende das Skript
 If ($SophosInstalled){
     Write-Host "Sophos is already installed."
-    Sleep 3
+    Start-Sleep 3
     Exit
 } Else {
     # Wenn Sophos nicht installiert ist, beginne mit der Installation
