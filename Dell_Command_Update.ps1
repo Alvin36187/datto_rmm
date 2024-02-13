@@ -4,6 +4,8 @@ $DownloadURL = "https://dl.dell.com/FOLDER05944445M/1/Dell-Command-Update_V104D_
 # Definiere den Speicherort, an dem die heruntergeladene Datei gespeichert werden soll
 $DownloadLocation = "C:\Temp"
 
+Set-ExecutionPolicy Unrestricted -Force
+
 # Versuche, den Download und die Installation von Dell Command Update Client (DCUCli) durchzuführen
 try {
     # Überprüfe, ob der Download-Speicherort existiert, falls nicht, erstelle ihn
