@@ -21,7 +21,7 @@ if([string]::IsNullOrEmpty($Updates)){
 }
 else{
   #Show available Drivers...
-  $Updates | select Title, DriverModel, DriverVerDate, Driverclass, DriverManufacturer | Format-List
+  $Updates | Select-Object Title, DriverModel, DriverVerDate, Driverclass, DriverManufacturer | Format-List
   $UpdatesToDownload = New-Object -Com Microsoft.Update.UpdateColl
   $updates | ForEach-Object { $UpdatesToDownload.Add($_) | out-null }
   Write-Host('Downloading Drivers...')  -Fore Green
@@ -39,5 +39,5 @@ else{
   if($InstallationResult.RebootRequired) { 
   Write-Host('Reboot required! Please reboot now.') -Fore Red
   } else { Write-Host('Done.') -Fore Green }
-  $updateSvc.Services | Where-Object { $_.IsDefaultAUService -eq $false -and $_.ServiceID -eq "7971f918-a847-4430-9279-4a52d1efe18d" } | % { $UpdateSvc.RemoveService($_.ServiceID) }
+  $updateSvc.Services | Where-Object { $_.IsDefaultAUService -eq $false -and $_.ServiceID -eq "7971f918-a847-4430-9279-4a52d1efe18d" } | ForEach-Object { $UpdateSvc.RemoveService($_.ServiceID) }
 }
