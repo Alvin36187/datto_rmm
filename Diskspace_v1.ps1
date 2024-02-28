@@ -16,7 +16,7 @@ function writeAlert ($message, $tier) {
 #--------------------------------------------------- CODE --------------------------------------------------
 
 #get a list of fixed drives
-$varLatest=-join (gwmi win32_logicalDisk | ? {$_.DriveType -eq 3} | select -expand DeviceID)
+$varLatest=-join (Get-WmiObject win32_logicalDisk | Where-Object {$_.DriveType -eq 3} | Select-Object -expand DeviceID)
 
 #load the old list into a variable and replace it with the new list
 $varStored=(get-itemproperty -path "HKLM:\Software\CentraStage" -name SGLDriveList -ea 0).SGLDriveList
