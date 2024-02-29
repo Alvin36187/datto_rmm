@@ -23,7 +23,7 @@ $varStored=(get-itemproperty -path "HKLM:\Software\CentraStage" -name SGLDriveLi
 new-itemproperty -path "HKLM:\Software\CentraStage" -name "SGLDriveList" -value $varLatest -Force
 
 #if this is the first time the script is run, place a marker and exit
-if ($varStored -eq $null) {
+if ($null -eq $varStored) {
  writeAlert "NOTICE: Script being run for first time. A marker has been placed." 0
 } 
 
