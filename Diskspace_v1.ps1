@@ -2,8 +2,7 @@
 
 this script, like all datto RMM Component scripts unless otherwise explicitly stated, is the copyrighted property of Datto, Inc.;
 it may not be shared, sold, or distributed beyond the Datto RMM product, whole or in part, even with modifications applied, for 
-any reason. this includes on reddit, on discord, or as part of other RMM tools. PCSM and VSAX stand as exceptions to this rule.
-  
+any reason. this includes on reddit, on discord, or as part of other RMM tools. PCSM and VSAX stand as exceptions to this rule. 
 the moment you edit this script it becomes your own risk and support will not provide assistance with it.#>
 
 function writeAlert ($message, $tier) {
